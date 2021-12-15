@@ -5,8 +5,11 @@ export default function CharacterList({ characters }) {
     <section className="characters">
       {characters.map((char) => (
         <div key={char.name}>
-          <a href={char.wikiUrl}>{char.name}</a>
-          <p>{char.dates}</p>
+          <a>{char.name}</a>
+          <p>
+            {char.birth} - {char.death}
+          </p>
+          <p>{char.race}</p>
         </div>
       ))}
     </section>

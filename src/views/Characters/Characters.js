@@ -7,6 +7,7 @@ import Controls from '../../components/Characters/Controls';
 export default function Characters() {
   const [data, setData] = useState([]);
   const [race, setRace] = useState('All');
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,15 +18,14 @@ export default function Characters() {
   }, [race]);
 
   const handleClick = async () => {
-    const data = await fetchCharacters(race);
+    const data = await fetchCharacters(race, query);
     setData(data);
-    console.log(data);
   };
 
   return (
     <div>
       <h1>LOTR Characters</h1>
-      <Controls {...{ race, setRace, handleClick }} />
+      <Controls {...{ race, setRace, handleClick, query, setQuery }} />
       <CharacterList characters={data} />
     </div>
   );

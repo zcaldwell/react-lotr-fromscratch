@@ -10,6 +10,7 @@ export default function Films() {
     const fetchData = async () => {
       const data = await fetchFilms();
       setData(data);
+      console.log(data);
     };
     fetchData();
   }, []);
