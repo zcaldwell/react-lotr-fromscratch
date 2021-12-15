@@ -8,6 +8,7 @@ export default function FilmList({ films }) {
           <h1>{film.title}</h1>
           <p>Box Office Total: {film.box_office_total}M</p>
           <p>Acadamy Award Nominations: {film.academy_award_nominations}</p>
+          <img src={`${process.env.PUBLIC_URL}/films/${film.title.split(' ').join('-')}.jpeg`} />
         </div>
       ))}
     </section>
