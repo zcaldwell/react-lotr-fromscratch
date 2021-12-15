@@ -3,12 +3,16 @@ import Characters from './views/Characters/Characters';
 import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Films from './views/Films/Films';
 import Books from './views/Books/Books';
+import Main from './views/Main/Main';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <header>
+          <NavLink to="/" data-testid="/" exact>
+            Home
+          </NavLink>
           <NavLink to="/films" data-testid="film-link">
             Films
           </NavLink>
@@ -20,6 +24,9 @@ function App() {
           </NavLink>
         </header>
         <Switch>
+          <Route path="/" exact>
+            <Main />
+          </Route>
           <Route path="/films">
             <Films />
           </Route>
