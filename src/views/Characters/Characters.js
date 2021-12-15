@@ -17,7 +17,7 @@ export default function Characters() {
   return (
     <div>
       <h1>LOTR Characters</h1>
-      <CharacterList characters={data}></CharacterList>
+      <CharacterList characters={data} />
     </div>
   );
 }
