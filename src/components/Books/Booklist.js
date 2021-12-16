@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function BookList({ books }) {
-  console.log(books);
   return (
     <section className="books">
       {books.map((book) => (
