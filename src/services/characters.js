@@ -18,5 +18,6 @@ export async function fetchCharacters(race, query = '') {
     }
   );
   const data = await resp.json();
+
   return data;
 }
