@@ -1,7 +1,7 @@
 import React from 'react';
 import { fetchBooks } from '../../services/books';
 import { useEffect, useState } from 'react';
-import BookList from '../../components/Books/BookList';
+import BookList from '../../components/Banana/BookList';
 
 export default function Books() {
   const [data, setData] = useState([]);
